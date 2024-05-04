@@ -1,10 +1,10 @@
 <!-- <p>todos works!</p> -->
 <div *ngFor="let todo of todos">
-    <app-todo-item [todo]="todo"></app-todo-item>
+    <app-todo-item [todo]="todo" (todoDelete)="deleteTodo($event)"></app-todo-item>
 </div>
 
-<section class="vh-100" style="background-color: #eee;">
-    <div class="container py-5 h-100">
+<!-- <section class="vh-100" style="background-color: #eee;">
+    <div class="container py-5 h-100"> -->
       <div class="row d-flex justify-content-center align-items-center h-100">
         <div class="col col-lg-9 col-xl-7">
           <div class="card rounded-3">
@@ -31,41 +31,35 @@
   
               <table class="table mb-4">
                 <thead>
-                  <tr>
+                  <tr >
                     <th scope="col">No.</th>
                     <th scope="col">Todo item</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Status</th>
                     <th scope="col">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
+                  <!-- <tr *ngFor="let todo of todos">
+                    <th scope="row">{{todo.sno}}</th>
+                    <td>{{todo.title}}</td>
+                    <td>{{todo.active}}</td>
+                    <td>
+                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger">Delete</button>
+                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-success ms-1">Finished</button>
+                    </td>
+                  </tr> -->
                   <tr>
-                    <th scope="row">d</th>
-                    <td>sd</td>
-                    <td>sdc</td>
+                    <th scope="row">1</th>
+                    <td>Task 1</td>
+                    <td>Reading</td>
+                    <td>False</td>
                     <td>
                       <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger">Delete</button>
                       <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-success ms-1">Finished</button>
                     </td>
                   </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Renew car insurance</td>
-                    <td>In progress</td>
-                    <td>
-                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger">Delete</button>
-                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-success ms-1">Finished</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Sign up for online course</td>
-                    <td>In progress</td>
-                    <td>
-                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger">Delete</button>
-                      <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-success ms-1">Finished</button>
-                    </td>
-                  </tr>
+                  
                 </tbody>
               </table>
   
@@ -73,5 +67,5 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    <!-- </div>
+  </section> -->

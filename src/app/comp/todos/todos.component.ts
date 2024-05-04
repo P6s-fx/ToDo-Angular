@@ -18,16 +18,23 @@ export class TodosComponent {
     this.todos = [
       {
         sno: 1,
-        title: "Param",
-        desc: "param desc",
+        title: "Task 1",
+        desc: "Book reading",
         active: true
       },
       {
         sno: 2,
-        title: "Suthar",
-        desc: "Suthar-desc",
+        title: "Task 2",
+        desc: "Dsa Practice",
         active: true
       },
     ]
   }
+
+  deleteTodo(todo:Todo){
+    console.log(todo);
+    const index = this.todos.indexOf(todo);
+    this.todos.splice(index,1)
+  }
+
 }

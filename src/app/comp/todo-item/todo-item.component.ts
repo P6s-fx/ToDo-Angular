@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from '../../models/Todo';
+// import { EventEmitter } from 'stream';
+
 
 @Component({
   selector: 'app-todo-item',
@@ -10,5 +12,11 @@ import { Todo } from '../../models/Todo';
 })
 export class TodoItemComponent {
   @Input() todo!: Todo;
-  
+  @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();
+
+  constructor(){}
+  onClick(todo: Todo){
+    this.todoDelete.emit(todo);
+    console.log("Clicked this!!!");
+  }
 }
